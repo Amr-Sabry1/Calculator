@@ -1,0 +1,183 @@
+body {
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: white;
+    --main-color: rgb(92, 66, 206);
+}
+
+footer {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    border-top: 5px solid var(--main-color);
+    background-color: var(--main-color);
+    padding: 10px 0px 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.calculator {
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.185);
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 330px;
+}
+
+.display {
+    min-height: 100px;
+}
+
+.display .input {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.display .output {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.display .operator {
+    color: #EB6666;
+}
+
+.display .brackets,
+.display .percent {
+    color: #001aff;
+    padding: 0 3px;
+}
+
+.Buttons {
+    background-color: #f0f0f079;
+    padding: 1.5rem;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1rem;
+}
+
+.Buttons::before {
+    content: '';
+    width: 80px;
+    height: 5px;
+    top: -17px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #d6d6d6c2;
+    border-radius: 40px;
+    position: absolute;
+}
+
+.Buttons .key {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background-color: white;
+    transition: 0.4s;
+    user-select: none;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.Buttons .key span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    color: black;
+}
+
+.Buttons .key:hover {
+    box-shadow: inset 0px 0px 10px rgba(60, 57, 121, 0.778);
+}
+
+.Buttons .key.operator span {
+    color: #EB6666;
+}
+
+.Buttons .key.action span {
+    color: #26FED7;
+}
+
+.Buttons .eaual {
+    background-color: hsl(20, 99%, 49%);
+}
+
+.Buttons .eaual span {
+    color: white;
+}
+
+.Buttons .bgMade {
+    background-color: #4c406fbb;
+}
+
+.Buttons .bgMade span {
+    color: white;
+}
+
+.spiner {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+    z-index: 999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 30px solid;
+    border-color: #ba4d00 transparent #ba4d00 transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+
+/* */
+
+.loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
