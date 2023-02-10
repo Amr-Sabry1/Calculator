@@ -7,16 +7,6 @@ body {
     --main-color: rgb(92, 66, 206);
 }
 
-footer {
-    bottom: 0;
-    right: 0;
-    left: 0;
-    font-size: 14px;
-    border-top: 5px solid var(--main-color);
-    background-color: var(--main-color);
-    padding: 10px 0px 5px;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -51,9 +41,13 @@ footer {
     color: #EB6666;
 }
 
-.display .brackets,
 .display .percent {
     color: #001aff;
+    padding: 0 3px;
+}
+
+.display .brackets {
+    color: #00c403;
     padding: 0 3px;
 }
 
@@ -135,7 +129,7 @@ footer {
     top: 0;
     right: 0;
     left: 0;
-    background-color: #ffffff;
+    background-color: #ffffffd7;
     z-index: 999999999;
     display: flex;
     justify-content: center;
@@ -143,8 +137,8 @@ footer {
 }
 
 .loader {
-    width: 48px;
-    height: 48px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     display: inline-block;
     position: relative;
@@ -158,8 +152,8 @@ footer {
 /* */
 
 .loader::before {
-    width: 32px;
-    height: 32px;
+    width: 20px;
+    height: 20px;
     border-color: #FFF #FFF transparent transparent;
     animation: rotation 1.5s linear infinite;
 }
